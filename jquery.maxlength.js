@@ -35,13 +35,13 @@
 						}
 					},
 					updateLength: function(length){
-						this.field.trigger("update.maxlength", [{
-							element: this.field,
-							lastLength: this.lastLength,
-							length: length,
-							maxLength: this.maxLength,
-							left: this.maxLength - length
-						}]);
+						this.field.trigger("update.maxlength", [
+							this.field,
+							this.lastLength,
+							length,
+							this.maxLength,
+							this.maxLength - length
+						]);
 						this.lastLength = length;
 					}
 				};
