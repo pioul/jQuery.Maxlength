@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" href="main.css" type="text/css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="../jquery.maxlength.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<div class="column">
+			<label for="input-1">Input 1: maxlength=50</label>
+			<input type="text" maxlength="50" id="input-1" value="Hello there!"/>
+			
+			<label for="input-2">Input 2: no maxlength attribute</label>
+			<input type="text" id="input-2" value="Oh hai!"/>
+			
+			<label for="textarea-1">Textarea 1: maxlength=50</label>
+			<textarea maxlength="50" id="textarea-1"></textarea>
+			
+			<label for="textarea-2">Textarea 2: maxlength=100, character counter in the grey div</label>
+			<textarea maxlength="100" id="textarea-2"></textarea>
+			
+			<label for="input-3">Input 3: maxlength=100, character counter in the grey div, custom text</label>
+			<input type="text" maxlength="100" id="input-3"/>
+		</div>
+		<div class="column">
+			<div class="counter-container">
+				<p class="header">Counter container for Textarea 2 and Input 3</p>
+			</div>
+		</div>
+	</body>
+</html>

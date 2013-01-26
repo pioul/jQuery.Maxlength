@@ -1,0 +1,50 @@
+body{
+	margin: 50px 0 50px 50px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	color: #333;
+	background-color: #fff;
+}
+
+.column {
+	float: left;
+	margin-right: 50px;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+}
+
+input,
+textarea {
+	width: 200px;
+	margin-bottom: 30px;
+}
+
+input + .maxlength,
+textarea + .maxlength {
+	position: relative;
+	top: -30px;
+}
+
+.counter-container {
+	width: 300px;
+	padding: 20px;
+	background: #f3f3f3;
+}
+
+.counter-container .header {
+	font-weight: bold;
+	margin: 0;
+}
+
+.counter-container .header,
+.counter-container .maxlength {
+	margin-bottom: 1em;
+}
+
+.counter-container .maxlength:last-child {
+	margin-bottom: 0;
+}
