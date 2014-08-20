@@ -25,7 +25,8 @@
 					maxLength: parseInt(t.attr("maxlength"), 10),
 					lastLength: null,
 					updateCounter: function(){
-						var length = this.field.val().length,
+						var val = this.field.val().replace(/\r\n/g, '~~').replace(/\n/g, '~~'),
+							length = this.field.val().length,
 							text = this.options.text.replace(/\B%(length|maxlength|left)\b/g, $.proxy(function(match, p){
 								return (p == 'length')? length : (p == 'maxlength')? this.maxLength : (this.maxLength - length);
 							}, this));
