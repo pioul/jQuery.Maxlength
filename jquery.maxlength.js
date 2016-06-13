@@ -13,6 +13,8 @@
 				{},
 				{
 					counterContainer: false,
+					lengthFunction: function(str){return str.length},
+					lengthAttribute: "maxlength",
 					text: '%left characters left' // %length %maxlength %left
 				},
 				options
@@ -22,10 +24,10 @@
 					options: options,
 					field: t,
 					counter: $('<div class="maxlength"></div>'),
-					maxLength: parseInt(t.attr("maxlength"), 10),
+					maxLength: parseInt(t.attr(options.lengthAttribute), 10),
 					lastLength: null,
 					updateCounter: function(){
-						var length = this.field.val().length,
+						var length = this.options.lengthFunction(this.field.val()),
 							text = this.options.text.replace(/\B%(length|maxlength|left)\b/g, $.proxy(function(match, p){
 								return (p == 'length')? length : (p == 'maxlength')? this.maxLength : (this.maxLength - length);
 							}, this));
